@@ -31,8 +31,8 @@ Releasing scripttester
 
     # Check no files outside version control that you want to keep
     git status
-    # Nuke
-    git clean -fxd
+    # Nuke, but keep the local pyenv version file
+    git clean -fxd -e .python-version
 
 * When ready::
 
