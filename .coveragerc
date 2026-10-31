@@ -1,5 +1,3 @@
 [run]
 branch = True
 source = scriptrunner
-omit =
-    scriptrunner/_version.py

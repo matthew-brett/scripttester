@@ -3,5 +3,5 @@
 
 from .scripttester import *
 
-from . import _version
-__version__ = _version.get_versions()['version']
+# Hand-edited version string. Update this when making a release.
+__version__ = '0.1'

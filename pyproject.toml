@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools>=77.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scripttester"
+description = "Utility for testing command line scripts"
+readme = "README.rst"
+license = "BSD-2-Clause"
+license-files = ["LICENSE"]
+authors = [
+    {name = "Matthew Brett", email = "matthew.brett@gmail.com"},
+]
+maintainers = [
+    {name = "Matthew Brett", email = "matthew.brett@gmail.com"},
+]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX",
+    "Operating System :: Unix",
+    "Operating System :: MacOS",
+]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+doc = [
+    "ghp-import",
+    "sphinx",
+    "numpydoc",
+]
+test = [
+    "pytest",
+    "setuptools",
+]
+
+[project.urls]
+Homepage = "https://github.com/matthew-brett/scripttester"
+
+[tool.setuptools.packages.find]
+include = ["scripttester*"]
+namespaces = true
+
+[tool.setuptools.package-data]
+scripttester = [
+    "tests/*.py",
+    "tests/mypkg66/*.py",
+    "tests/mypkg66/mypkg66/*",
+    "tests/mypkg66/scripts/*",
+]
+
+[tool.setuptools.dynamic]
+version = {attr = "scripttester.__version__"}

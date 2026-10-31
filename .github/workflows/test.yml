@@ -32,9 +32,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v7
-        with:
-          # Full history so versioneer can derive the version from tags.
-          fetch-depth: 0
 
       - uses: actions/setup-python@v7
         with:
